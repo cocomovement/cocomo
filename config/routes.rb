@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :restaurant_profiles
   get 'splash/Welcome'
 
   get 'splash/index'

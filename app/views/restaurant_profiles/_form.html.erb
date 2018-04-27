@@ -1,0 +1,52 @@
+<%= form_with(model: restaurant_profile, local: true) do |form| %>
+  <% if restaurant_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(restaurant_profile.errors.count, "error") %> prohibited this restaurant_profile from being saved:</h2>
+
+      <ul>
+      <% restaurant_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :restaurant_profile_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :restaurant_profile_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, id: :restaurant_profile_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :restaurant_profile_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :food_type %>
+    <%= form.text_field :food_type, id: :restaurant_profile_food_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :green_status %>
+    <%= form.text_field :green_status, id: :restaurant_profile_green_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :restaurant_profile_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Restaurant Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Food type</th>
+      <th>Green status</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurant_profiles.each do |restaurant_profile| %>
+      <tr>
+        <td><%= restaurant_profile.name %></td>
+        <td><%= restaurant_profile.address %></td>
+        <td><%= restaurant_profile.phone %></td>
+        <td><%= restaurant_profile.email %></td>
+        <td><%= restaurant_profile.food_type %></td>
+        <td><%= restaurant_profile.green_status %></td>
+        <td><%= restaurant_profile.description %></td>
+        <td><%= link_to 'Show', restaurant_profile %></td>
+        <td><%= link_to 'Edit', edit_restaurant_profile_path(restaurant_profile) %></td>
+        <td><%= link_to 'Destroy', restaurant_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restaurant Profile', new_restaurant_profile_path %>

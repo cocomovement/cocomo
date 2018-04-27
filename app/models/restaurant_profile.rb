@@ -1,0 +1,2 @@
+class RestaurantProfile < ApplicationRecord
+end
