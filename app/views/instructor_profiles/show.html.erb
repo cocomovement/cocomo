@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @instructor_profile.name %>
+</p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @instructor_profile.class %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @instructor_profile.schedule %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @instructor_profile.location %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @instructor_profile.bio %>
+</p>
+
+<p>
+  <strong>Excerpt:</strong>
+  <%= @instructor_profile.excerpt %>
+</p>
+
+<%= link_to 'Edit', edit_instructor_profile_path(@instructor_profile) %> |
+<%= link_to 'Back', instructor_profiles_path %>
